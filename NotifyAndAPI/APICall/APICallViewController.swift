@@ -21,10 +21,8 @@ class APICallViewController: UIViewController {
     
     @IBAction func showTapped(_ sender: Any) {
       getJokes()
-        tableView.rowHeight = UITableView.automaticDimension
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.tableView.reloadData()
-           
         }
     }
    private func getJokes(){
